@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load Tailwind UI components -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <!-- Load the Tailwind CSS framework -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+              },
+            }
+          }
+        }
+      </script>
     <title>My Portfolio</title>
 </head>
 <body class="bg-slate-50">
@@ -20,8 +34,8 @@
         <a href="#contact">Contact</a>
     </nav>
     <!-- The "hero" image is loaded here -->
-    <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover h-96 scale-100 lg:h-screen"
-        style="background-image: url('./assets/images/cliff_lg.jpg');">
+    <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-fit h-96 scale-100 lg:h-screen"
+        style="background-image: url('./assets/images/cliff-headshot2-sm.jpg');">
             <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
                 style="background-color: rgba(0, 0, 0, 0.2)">
                 <div class="flex justify-start items-center ml-10 md:ml-20 lg:ml-40 h-full">
@@ -94,5 +108,7 @@
             </a>
         </div>
     </div>
+    <!-- Load the JavaScript bundle for Tailwind UI -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>
