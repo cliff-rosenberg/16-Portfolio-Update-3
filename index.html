@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <!-- Load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!-- Load the Tailwind CSS framework -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,64 +25,55 @@
       </script>
     <title>My Portfolio</title>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-100">
     <!-- Top navbar of page -->
     <nav id="top-navbar" class="relative w-full flex flex-wrap space-x-4 items-center justify-left p-5 py-3 bg-blue-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
         <a class="active" href="#home">Home</a>
         <a href="#work">Work</a>
         <a href="#about">About Me</a>
         <a href="https://www.dropbox.com/s/9gg4m98v8e5vxhn/Cliff_Rosenberg_Resume.pdf?dl=0">Download Resume</a>
-        <a href="https://github.com/cliff-rosenberg">Github Repository</a>
-        <a href="#contact">Contact</a>
+        <a href="https://github.com/cliff-rosenberg"><i class="fa-brands fa-github pr-1"></i>Github Repository</a>
+        <a href="https://www.linkedin.com/in/cliff-rosenberg-az/"><i class="fa-brands fa-linkedin pr-1"></i>Linkedin</a>
+        <a href="mailto:cliff459@icloud.com"><i class="fa-regular fa-envelope pr-1"></i>Email Me</a>
     </nav>
     <!-- The "hero" image is loaded here -->
-    <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-fit h-96 scale-100 lg:h-screen"
-        style="background-image: url('./assets/images/cliff-headshot2-sm.jpg');">
-            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-                style="background-color: rgba(0, 0, 0, 0.2)">
-                <div class="flex justify-start items-center ml-10 md:ml-20 lg:ml-40 h-full">
-                    <div class="text-white">
-                        <h1 class="md:font-semibold sm:text-xl md:text-3xl lg:text-4xl mb-2">I'm Cliff Rosenberg</h1>
-                        <p class="font-normal md:font-semibold text-xs md:text-lg lg:text-xl">I am a Full Stack Developer</p>
-                    </div>
-                </div>
-            </div>
+    <div class="hero container mx-auto">
+        <img src="./assets/images/cliff-headshot2-sm.jpg" class="mx-auto max-w-full h-auto object-contain">
     </div>
     
+
     <!-- Top divider/header for project screenshots -->
     <div id="work" class="box-content bg-blue-900 items-center sm:h-3 md:h-10 p-4 mb-2 border-10">
         <h2 class="text-white text-base md:text-xl lg:text-2xl">Here are some projects I've been a part of:</h2>
     </div>
     <!-- cards with projects and screenshot thumbnail images -->
-    <!-- Top image container -->
-    <div class="container mx-auto">
-        <div id="gallery-item-top-1" class="relative object-contain ring-red-500 hover:ring-4">
-            <a href="https://github.com/cliff-rosenberg/Streaming-Project">
-                <img src="./assets/images/seeker_screenshot1.png" alt="Streaming Project Screenshot"></a>
-            <div class="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <h2 class="text-white text-xs md:text-base lg:text-3xl">Web Video Streaming Search</h2>
-            </div>
+    <div class="container mx-auto py-2">
+    <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
+      <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item active relative float-left w-full">
+          <img
+            src="./assets/images/seeker_screenshot1.png"
+            class="block w-full"
+            alt="Streaming Site Finder App"
+          />
         </div>
-        
+        <div class="carousel-item relative float-left w-full">
+          <img
+            src="./assets/images/weather_screenshot.png"
+            class="block w-full"
+            alt="Weather Forecasts by City App"
+          />
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <img
+            src="./assets/images/scheduler_screenshot.png"
+            class="block w-full"
+            alt="Workday Scheduler App"
+          />
+        </div>
+      </div>
     </div>
-    <!-- Grid container for other projects -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4 place-items-center items-center">
-        <div id="gallery-item-2" class="text-center p-1 bg-white border-2 rounded-lg max-w-sm ring-red-500 hover:ring-4">
-            <a href="https://github.com/cliff-rosenberg/06-Weather_Dashboard" title="Weather Forecast Dashboard">
-                <img src="./assets/images/weather_screenshot.png" alt="Weather Forecast Dashboard Project"></a>
-            <h2>Weather Forecast Dashboard</h2>
-        </div>
-        <div id="gallery-item-3" class="text-center p-1 bg-white border-2 rounded-lg max-w-sm ring-red-500 hover:ring-4">
-            <a href="https://github.com/cliff-rosenberg/03-password-generator" title="Password Generator">
-                <img src="./assets/images/password_gen_screenshot.png" alt="Project #3"></a>
-            <h2>Password Generator</h2>
-        </div>
-        <div id="gallery-item-4" class="text-center p-1 bg-white border-2 rounded-lg max-w-sm ring-red-500 hover:ring-4">
-            <a href="https://github.com/cliff-rosenberg/05-Work_Day_Scheduler" title="Work/Day Scheduler">
-                <img src="./assets/images/scheduler_screenshot.png" alt="Project #4"></a>
-            <h2>Work/Day Scheduler</h2>
-        </div>
-    </div>
+  </div>
     
     <!-- The "about me" header -->
     <div id="about" class="box-content bg-blue-900 items-center sm:h-3 md:h-10 p-4 border-10">
@@ -90,23 +83,6 @@
     <!-- Text content for "About Me" box -->
     <div class="box-content bg-gray-200 p-4 border-4 border-solid border-black">
         <p class="sm-text-base md:text-lg lg:text-xl">Cliff is currently an Automation Technician that has more than a decade of experience in large automated manufacturing systems that interconnect and provide data to business operations. His background with computers and electronics spans back to his childhood, when his parents would take him to school early in the morning when the library opened so he could have time to work on the Apple computer there before class. His most recent challenges have him troubleshooting and fine-tuning automated manufacturing systems for a top-tier national Dairy food producer with multiple facilities in the USA. Cliff is currently working though a Full Stack software development course though The University of Arizona and is interested in future career challenges in that field.</p>
-    </div>
-
-    <!-- page footer loads here -->
-    <div class="flex flex-row mt-2 py-4 bg-gray-200 border-solid border-black border-4">
-        <div id="contact">
-            <h2 class="italic underline underline-offset-4 pl-2 text-black sm:text-base md:text-xl lg:text-3xl">Contact Me At :</h2>
-        </div>
-        <div class="pl-4">
-            <a href="https://www.linkedin.com/in/cliff-rosenberg-az/" target="_blank" title="Linkedin">
-            <img src="./assets/images/LinkedIn-Icon.png" alt="Linkedin" width="50" height="50"/>
-            </a>              
-        </div>
-        <div class="pl-4">
-            <a href="mailto:cliff459@icloud.com" title="Email">
-            <img src="./assets/images/email_icon.png" alt="Send Email to Cliff" width="50" height="50"/>
-            </a>
-        </div>
     </div>
     <!-- Load the JavaScript bundle for Tailwind UI -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
