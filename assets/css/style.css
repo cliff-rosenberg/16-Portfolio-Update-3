@@ -61,6 +61,10 @@
   border-radius: 10px;
 }
 
+.desc-text {
+  font-size: 0.875em;
+}
+
 /* Footer */
 
 .page-footer {
