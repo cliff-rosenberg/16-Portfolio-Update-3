@@ -61,7 +61,7 @@
   border-radius: 10px;
 }
 
-#proj-image {
+.proj-image {
   margin: auto;
   text-align: center;
   max-height: 100%;
