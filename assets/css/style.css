@@ -1,0 +1,77 @@
+/* top-nav*/
+
+.sidenav {
+  background-color: #fff;
+}
+
+.main {
+  padding: 70px 0;
+}
+
+/*Body*/
+
+.main {
+  background-image: linear-gradient(#00acc1, white, white, #efefef);
+}
+
+.main h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
+}
+
+.info-box {
+  border-radius: 10px;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.fill img {
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: auto;
+  border-radius:10px;
+  margin:25px
+}
+
+/* social media icons */
+
+.social-icons li{
+  display: inline-block;
+}
+
+.social-icons i{
+  font-size: 2rem;
+  color: #00acc1;
+  margin: auto 10px auto 10px;
+}
+
+.fa-solid {
+  color: #00acc1;
+}
+
+/* cards */
+
+.card {
+  border-radius: 10px;
+}
+
+#proj-image {
+  margin: auto;
+  text-align: center;
+  width: 325px;
+  height: 225px;
+  object-fit: contain;
+}
+
+/* footer */
+
+.page-footer {
+  padding-top: 0;
+  border-top: 1px;
+}
