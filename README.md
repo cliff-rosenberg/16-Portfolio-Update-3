@@ -21,23 +21,33 @@ Link: [MIT License](https://opensource.org/licenses/MIT)
 
 ## Description
 
-TODO
+This is an update to my web portfolio, with added recent projects and a total "ground-up" rebuild using the "Materialize CSS" framework. It is a responsive and "mobile friendly" design.
 
 ## Installation
 
-TODO
+No install is needed, the page is hosted here in Github Pages:
+
+[https://cliff-rosenberg.github.io/16-Portfolio-Update-3/](https://cliff-rosenberg.github.io/16-Portfolio-Update-3/)
 
 ## Screenshots
 
-TODO
+![Screenshot](./assets/images/portfolio-render.png)
 
 ## Usage
 
-TODO
+Launch page from Github Pages: [https://cliff-rosenberg.github.io/16-Portfolio-Update-3/](https://cliff-rosenberg.github.io/16-Portfolio-Update-3/)
 
 ## Credits
 
-TODO
+The page was developed utilizing the following CSS tools:
+
+[Materialize CSS](https://materializecss.github.io/materialize/)
+
+[Font Awesome icon toolkit](https://fontawesome.com/)
+
+[Google Fonts - Material Icons](https://developers.google.com/fonts/docs/material_icons)
+
+[JQuery library](https://jquery.com/)
 
 ## Contributing
 
