@@ -1,89 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Load Tailwind UI components -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <!-- Load Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <!-- Load the Tailwind CSS framework -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-              },
-            }
-          }
-        }
-      </script>
-    <title>My Portfolio</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <!-- CSS loads here -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link href="./assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+  <!-- page title -->
+  <title>Portfolio Page</title>
 </head>
-<body class="bg-slate-100">
-    <!-- Top navbar of page -->
-    <nav id="top-navbar" class="relative w-full flex flex-wrap space-x-4 items-center justify-left p-5 py-3 bg-blue-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
-        <a class="active" href="#home">Home</a>
-        <a href="#work">Work</a>
-        <a href="#about">About Me</a>
-        <a href="https://www.dropbox.com/s/9gg4m98v8e5vxhn/Cliff_Rosenberg_Resume.pdf?dl=0">Download Resume</a>
-        <a href="https://github.com/cliff-rosenberg"><i class="fa-brands fa-github pr-1"></i>Github Repository</a>
-        <a href="https://www.linkedin.com/in/cliff-rosenberg-az/"><i class="fa-brands fa-linkedin pr-1"></i>Linkedin</a>
-        <a href="mailto:cliff459@icloud.com"><i class="fa-regular fa-envelope pr-1"></i>Email Me</a>
-    </nav>
-    <!-- The "hero" image is loaded here -->
-    <div class="hero container mx-auto">
-        <img src="./assets/images/cliff-headshot2-sm.jpg" class="mx-auto max-w-full h-auto object-contain">
+
+<body>
+
+  <!-- Top Nav for wide screens -->
+  <nav class="cyan darken-1 z-depth-5" role="navigation">
+    <div class="nav-wrapper container">
+      <ul class="hide-on-med-and-down">
+        <li><img src="./assets/images/logo.png" alt="" style="height:auto; width: 60px; padding-top:5px"></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="https://www.dropbox.com/s/9gg4m98v8e5vxhn/Cliff_Rosenberg_Resume.pdf?dl=0">Download Resume</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <!-- side navbar for mobile width screens -->
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="./assets/images/side-bar.jpg" style="height:auto; width:300px">
+            </div>
+            <a href="#user"><img class="" src="./assets/images/logo.png"></a>
+            <a href="#name"><span class="white-text name">Cliff Rosenberg</span></a>
+            <a href="mailto:cliff459@icloud.com"><span class="white-text email">cliff459@icloud.com</span></a>
+          </div>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-    
-    <!-- Top divider/header for project screenshots -->
-    <div id="work" class="box-content bg-blue-900 items-center sm:h-3 md:h-10 p-4 mb-2 border-10">
-        <h2 class="text-white text-base md:text-xl lg:text-2xl">Here are some projects I've been a part of:</h2>
-    </div>
-    <!-- cards with projects and screenshot thumbnail images -->
-    <div class="container mx-auto py-2">
-    <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
-      <div class="carousel-inner relative w-full overflow-hidden">
-        <div class="carousel-item active relative float-left w-full">
-          <img
-            src="./assets/images/seeker_screenshot1.png"
-            class="block w-full"
-            alt="Streaming Site Finder App"
-          />
+  </nav>
+
+  <!-- main body starts here -->
+  <div id="about-me" class="main">
+
+    <!-- code for fullwidth page -->
+    <div class="container grey lighten-5 z-depth-5 info-box hide-on-small-only">
+      <div class="row valign-wrapper">
+        <div class="col s12 m6 fill responsive">
+          <img src="./assets/images/cliff-headshot2-sm.jpg" alt="" class="z-depth-2 responsive-img" style="">
         </div>
-        <div class="carousel-item relative float-left w-full">
-          <img
-            src="./assets/images/weather_screenshot.png"
-            class="block w-full"
-            alt="Weather Forecasts by City App"
-          />
-        </div>
-        <div class="carousel-item relative float-left w-full">
-          <img
-            src="./assets/images/scheduler_screenshot.png"
-            class="block w-full"
-            alt="Workday Scheduler App"
-          />
+        <div class="col s12 m6">
+          <div class="mb-5">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5 class="browser-default">Hello, I am</h5>
+                  <h2 class="browser-default">Cliff Rosenberg</h2>
+                  <h5>Full Stack Developer</h5>
+                  <p class="mb-4">Cliff is currently an Automation Technician that has more than a decade of experience in large automated manufacturing systems that interconnect and provide data to business operations. 
+                    His most recent challenges have him troubleshooting and fine-tuning automated manufacturing systems for a top-tier national Dairy food producer with multiple facilities in the USA. 
+                    Cliff is currently working though a Full Stack software development course though The University of Arizona and is interested in future career challenges in that field.</p>
+                  <ul>
+                    <li><i class="fa-solid fa-phone"></i>‭ (602) 303-4665‬</li>
+                    <li><i class="fa-solid fa-city"></i>‭ Phoenix, AZ</li>
+                    <li><i class="fa-solid fa-envelope"></i> cliff459@icloud.com</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="social-container center-align">
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/cliff-rosenberg-az"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/cliff-rosenberg"><i class="fa-brands fa-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-    
-    <!-- The "about me" header -->
-    <div id="about" class="box-content bg-blue-900 items-center sm:h-3 md:h-10 p-4 border-10">
-        <h2 class="text-white sm:text-base md:text-xl lg:text-2xl">About Me:</h2>
+
+
+    <!-- code for mobile page -->
+    <div class="container grey lighten-5 z-depth-5 info-box hide-on-med-and-up">
+      <div class="row valign-wrapper">
+        <div class="col s12 fill responsive">
+          <img src="./assets/images/cliff-headshot2-sm.jpg" alt="" class="z-depth-2 responsive-img" style="">
+        </div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s12">
+          <div class="mb-5">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5 class="browser-default">Hello, I am</h5>
+                  <h2 class="browser-default">Cliff Rosenberg</h2>
+                  <h5>Full Stack Developer</h5>
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing at in tellus integer feugiat scelerisque varius.</p>
+                  <ul>
+                    <li><i class="fa-solid fa-phone"></i>‭ (602) 303-4665‬</li>
+                    <li><i class="fa-solid fa-city"></i>‭ Phoenix, AZ</li>
+                    <li><i class="fa-solid fa-envelope"></i> cliff459@icloud.com</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="social-container center-align">
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/cliff-rosenberg-az"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/cliff-rosenberg"><i class="fa-brands fa-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Text content for "About Me" box -->
-    <div class="box-content bg-gray-200 p-4 border-4 border-solid border-black">
-        <p class="sm-text-base md:text-lg lg:text-xl">Cliff is currently an Automation Technician that has more than a decade of experience in large automated manufacturing systems that interconnect and provide data to business operations. His background with computers and electronics spans back to his childhood, when his parents would take him to school early in the morning when the library opened so he could have time to work on the Apple computer there before class. His most recent challenges have him troubleshooting and fine-tuning automated manufacturing systems for a top-tier national Dairy food producer with multiple facilities in the USA. Cliff is currently working though a Full Stack software development course though The University of Arizona and is interested in future career challenges in that field.</p>
+    <!-- Cards go here -->
+    <div id="projects">
+      <div class="container">
+        <!-- first row starts here -->
+        <div class="row">
+          <div class="col s12 m7 l4">
+            <div class="card">
+              <div id="proj-image" class="card-image">
+                <img src="./assets/images/acme-screenshot1.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title black-text">Business Invoicing App</span>
+                <p>A customer management and inventory management system with invoice billing functions 
+                  using the "Model-View-Controller" concept. Uses a MySQL database.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/cliff-rosenberg/Acme-Invoicer" target="_blank">Github repository link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m7 l4">
+            <div class="card">
+              <div id="proj-image" class="card-image">
+                <img src="./assets/images/tech-blog-screenshot1.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title black-text">Tech Blog</span>
+                <p>A simple Tech Blog using the Model-View-Controller format. 
+                  A MySQL database is used to store User data, as well as Posts and Comments on those Posts.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/cliff-rosenberg/14-MVC-Tech-Blog" target="_blank">Github repository link</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col s12 m7 l4">
+            <div class="card">
+              <div id="proj-image" class="card-image">
+                <img src="./assets/images/seeker_screenshot1.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title black-text">Video Streaming Search</span>
+                <p>This project uses HTML, CSS and JavaScript to query multiple APIs 
+                  to retrieve data for movies and TV shows that are available to stream from multiple sources online.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/cliff-rosenberg/Streaming-Project" target="_blank">Github repository link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end first row -->
+        <div class="row">
+          <div class="col s12 m7 l4">
+            <div class="card">
+              <div id="proj-image" class="card-image">
+                <img src="./assets/images/weather_screenshot.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title black-text">Weather Forcast App</span>
+                <p>A "weather dashboard" app that takes a city name and returns weather data from the OpenWeather API. 
+                  Uses the Bulma.io CSS framework for page styling.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/cliff-rosenberg/06-Weather_Dashboard" target="_blank">Github repository link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m7 l4">
+            <div class="card">
+              <div id="proj-image" class="card-image">
+                <img src="./assets/images/scheduler_screenshot.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title black-text">Workday Scheduler</span>
+                <p>A simple workday scheduler app using HTML, CSS, and JavaScript,
+                  that stores data using the "Local Storage" functions.
+                  Also uses JQuery and the Moment.js library for time formatting.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/cliff-rosenberg/05-Work_Day_Scheduler" target="_blank">Github repository link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m7 l4">
+            <div class="card">
+              <div id="proj-image" class="card-image">
+                <img src="./assets/images/password_gen_screenshot.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title black-text">Random Password Generator</span>
+                <p>This project uses Javascript in a webpage to put together a random password given a length and what characters/numbers the user desired it to consist of.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/cliff-rosenberg/03-password-generator" target="_blank">Github repository link</a>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- end second row -->
+      </div>
     </div>
-    <!-- Load the JavaScript bundle for Tailwind UI -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </div>
+
+  <!-- footer -->
+  <footer class="page-footer white">
+    <div class="footer-copyright">
+      <div class="container">
+        <span class="black-text">© 2022 Copyright Text</span>
+      </div>
+    </div>
+  </footer>
+  <!--  scripts load here -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./assets/js/materialize.js"></script>
+  <script src="./assets/js/init.js"></script>
+
 </body>
 </html>
