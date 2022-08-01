@@ -64,9 +64,7 @@
 #proj-image {
   margin: auto;
   text-align: center;
-  width: 325px;
-  height: 225px;
-  object-fit: contain;
+  max-height: 100%;
 }
 
 /* footer */
